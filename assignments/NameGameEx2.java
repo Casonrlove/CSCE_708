@@ -2,9 +2,9 @@ package assignments;
 
 import java.util.Scanner;
 
-public class NameGameEx2 
+public class NameGameEx2
 {
-    public static void main(String[] args) 
+    public static void main(String[] args)
     {
         
         //-----------------------HEADER-----------------------//
@@ -17,11 +17,14 @@ public class NameGameEx2
         //-----------------------TAKE NAME AS INPUT-----------------------//
         System.out.print("What is your name? ");
         Scanner scnr = new Scanner(System.in);
-        String user_name = scnr.nextLine();
-        
+        String user_name = scnr.next();
 
+        //-----------------------Check for inappropriate names-----------------------//
+        
+        
+        System.out.println("The user name: " + user_name);
         //-----------------------CHECK IF MY NAME-----------------------//
-        if((user_name == "Cason") || (user_name == "cason"))
+        if((user_name.equals("Cason")) || (user_name.equals("cason")))
         {
             System.out.println("\nHowdy " + user_name + " thats my name too!");
         }
@@ -79,7 +82,7 @@ public class NameGameEx2
         {
             is_double_vowel = true;
         }
-        else if (first_letter_consanant && last_letter_consanant) 
+        else if (first_letter_consanant && last_letter_consanant)
         {
             is_double_consanant = true;
         }
@@ -94,8 +97,8 @@ public class NameGameEx2
         if(is_double_consanant)
         {
             String second_string = user_name.substring(2);
-            System.out.printf( 
-                    "%s, %s, Bo-b%s\nBo-na-na fana Fo-f%s\nFee fi Mo-m%s, %s!\n", 
+            System.out.printf(
+                    "%s, %s, Bo-b%s\nBo-na-na fana Fo-f%s\nFee fi Mo-m%s, %s!\n",
                     user_name, user_name, second_string, second_string, second_string, user_name);
         }
         //----------DOUBLE VOWELS----------//
@@ -111,11 +114,12 @@ public class NameGameEx2
         //----------B AS FIRST LETTER----------//
         else if((user_name.charAt(0) == 'B') ||(user_name.charAt(0) == 'b'))
         {
-            String second_string = user_name.substring(2);
+            String second_string = user_name.substring(1);
             System.out.printf(
-                    "Bob, Bob, Bo-ob Bo-na-\n" + //
-                    "na fana Fo-fob Fee fi\n" + //
-                    "Mo-mob, Bob!");
+                    "%s, %s, Bo-%s Bo-na-\n" + //
+                    "na fana Fo-f%s Fee fi\n" + //
+                    "Mo-m%s, %s!",
+                    user_name, user_name, second_string, second_string, second_string, user_name);
         }
         //----------F AS FIRST LETTER----------//
         else if((user_name.charAt(0) == 'F') ||(user_name.charAt(0) == 'f'))
@@ -124,7 +128,7 @@ public class NameGameEx2
             System.out.printf(
                     "%s, %s, Bo-b%s\n" + //
                     "Bo-na-na fana Fo-%s Fee\n" + //
-                    "fi Mo-m%s, %s!", 
+                    "fi Mo-m%s, %s!",
                     user_name, user_name, second_string, second_string, second_string, user_name);
         }
         //----------M AS FIRST LETTER----------//
@@ -151,7 +155,7 @@ public class NameGameEx2
         else if(first_letter_vowel)
         {
             String second_string = user_name.toLowerCase();
-            System.out.printf( 
+            System.out.printf(
                     "%s, %s, Bo-b%s\n" + //
                     "Bo-na-na fana Fo-fana Fee\n" + //
                     "fi Mo-m%s, %s!",
@@ -162,6 +166,7 @@ public class NameGameEx2
             System.out.println("Something went wrong");
         }
 
-
+        System.out.println("\n\n\n");
+        System.out.println("Thank you for playing, " + user_name);
     }
 }
