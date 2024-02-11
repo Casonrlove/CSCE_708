@@ -8,7 +8,7 @@ import java.util.Scanner;
  * The Name Game
  */
 
-public class NameGameEx2
+public class NameGame
 {
     public static void main(String[] args)
     {
