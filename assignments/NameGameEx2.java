@@ -2,6 +2,12 @@ package assignments;
 
 import java.util.Scanner;
 
+/*
+ * Cason Love - 529008776
+ * CSCE 708
+ * The Name Game
+ */
+
 public class NameGameEx2
 {
     public static void main(String[] args)
@@ -20,9 +26,26 @@ public class NameGameEx2
         String user_name = scnr.next();
 
         //-----------------------Check for inappropriate names-----------------------//
+        if(user_name.contains("uck") || user_name.contains("itch") || user_name.contains("dam")|| user_name.contains("dam") || user_name.contains("ass"))
+        {
+            System.out.println("\nBad names will not be allowed\n");
+            System.exit(0);
+        }
+
+        //-----------------------Check for awkward names-----------------------//
+        if(user_name.contains("art") || user_name.contains("Art"))
+        {
+            System.out.println("\nHowdy, this name can be embarrassing for some users, would you like to continue? Type yes or no\n");
+            String to_continue = scnr.next();
+            if(to_continue.equals("no") || to_continue.equals("No"))
+            {
+                System.out.println("\n");
+                System.out.println("Thank you for playing, " + user_name);
+                System.exit(0);
+            }   
+        }
         
-        
-        System.out.println("The user name: " + user_name);
+        System.out.println("\nThe user name: " + user_name);
         //-----------------------CHECK IF MY NAME-----------------------//
         if((user_name.equals("Cason")) || (user_name.equals("cason")))
         {
