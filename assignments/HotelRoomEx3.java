@@ -4,6 +4,7 @@
  * Cason Love
  * 529008776
  * CSCE 708
+ * HotelRoomEx3.java
  */
 import javax.swing.JOptionPane;
 
@@ -22,20 +23,23 @@ public class HotelRoomEx3{
         int rooms_per_floor = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the total number of rooms per floor"));
         
         //----------CHECK CONDITIONS----------//
-        if(starting_floor <3 || starting_floor > 6)
+        while(starting_floor <3 || starting_floor > 6)
         {
             JOptionPane.showMessageDialog(null, "Starting floor must be between 3 and 6.");
-            System.exit(0);
+            starting_floor  = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the starting floor"));
+            // System.exit(0);
         }
-        else if((starting_floor + num_floors) > 21)
+        while((starting_floor + num_floors) > 21)
         {
             JOptionPane.showMessageDialog(null, "Top floor must be between 3 and 21.");
-            System.exit(0);
+            num_floors      = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the total number of floors"));
+            // System.exit(0);
         }
-        else if((rooms_per_floor > 999) || (rooms_per_floor < 1))
+        while((rooms_per_floor > 999) || (rooms_per_floor < 1))
         {
             JOptionPane.showMessageDialog(null, "Rooms per floor should be between 1 and 999.");
-            System.exit(0);
+            rooms_per_floor = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the total number of rooms per floor"));
+            // System.exit(0);
         }
         
         //----------PRINT----------//
