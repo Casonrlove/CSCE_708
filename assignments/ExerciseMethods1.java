@@ -41,12 +41,14 @@ public class ExerciseMethods1{
 		@return the distance between the max and min numbers given.
 	*/
 	public static int intRange(int num1, int num2, int num3, int num4)
-	{
-			int max = Math.max(num1, Math.max(num2, Math.max(num3, num4)));
-			int min = Math.max(num1, Math.max(num2, Math.max(num3, num4)));
-	
-		return max - min;//only here to compile, you will need to change.
-	}// end intRange
+	{ 
+		//find max, min, and range is difference between them//
+		int max = Math.max(num1, Math.max(num2, Math.max(num3, num4)));
+		int min = Math.min(num1, Math.min(num2, Math.min(num3, num4)));
+		System.out.println("max is " + max + " min is " + min);
+		
+		return (max - min);
+	}
 
 	/**
 		Integer method returns the integer given reversed. Leading zeros do not
@@ -63,18 +65,34 @@ public class ExerciseMethods1{
 	public static int intReverse(int num)
 	{
 		//reverse int
-		int reversed_num;
-		// String string_num = Integer.toString(num);
-		// boolean is_negative;
-		// if (string_num.charAt(0) == '-') {
-		// 	is_negative = true;
-		// 	string_num = string_num.substring(1);
-		// }
-		
-		return reversed_num = Integer.reverse(num);
+		if(num == 0)
+		{
+			return 0;
+		}
+		//get rid of negative sign//
+		String str_num = Integer.toString(Math.abs(num)); 
 
-    	// return 0;//only here to compile, you will need to change.
-	}// end intReverse
+		//initialized variable//
+		String str_reversed = ""; 
+
+		//running the length of the string in reverse//
+		for(int i = str_num.length()-1; i>=0; i--)
+		{ 
+			str_reversed += (str_num.charAt(i)); 
+		}
+		//back to int//
+		int reversed = Integer.parseInt(str_reversed); 
+
+		// make negative again if it was to begin with//
+		if(num < 0 )
+		{ 
+			reversed *= -1;
+		}
+
+    	//return reversed number//
+		return reversed; 
+
+	}
 
 
 	/**
@@ -97,9 +115,18 @@ public class ExerciseMethods1{
 	*/
 	public static double threeTriangles(double num1, double num2, double num3)
 	{
-		// Your answer here. Edit the return statement as necessary.
-		return 0.0;//only here to compile, you will need to change.
-	}// end threeTriangles
+		//calculate the area of each triangle // 
+		double area1 = (num1 * num1) / 2;
+		double area2 = (num2 * num2) / 2;
+		double area3 = (num3 * num3) / 2;
+	
+		//calculate the sum of the areas of all three right triangles//
+		double total_area = area1 + area2 + area3;
+
+		//return total area//
+		return total_area;
+		
+	}
 
 	/**
 	 * Double method returns the fractional part of the number given.
@@ -114,12 +141,11 @@ public class ExerciseMethods1{
 	 * @param num double
 	 * @return The fractional part of the number.
 	 */
-		
 	public static double fractionalPart(double num)
 	{
-		// Your answer here. Edit the return statement as necessary.
-		return 0.0;//only here to compile, you will need to change.
-	}// end fractionalPart
+		//remove the integer before the decimal
+		return num - (int) num;
+	}
 
 
 	/**
@@ -140,9 +166,17 @@ public class ExerciseMethods1{
 	*/
 	public static boolean firstLastEqual(String original)
 	{
-		// Your answer here. Edit the return statement as necessary.
-    	return false;//only here to compile, you will need to change.
-	}// end firstLastEqual
+		// empty or less than 2 char
+		if(original.equals(null) || original.length() < 2)
+		{
+			return false;
+		} 
+		String lower_case = original.toLowerCase();
+
+		//return a boolean based on first and last character
+    	return (lower_case.charAt(0) == lower_case.charAt(lower_case.length() - 1));
+
+	}
 
 
 	/**
@@ -160,9 +194,9 @@ public class ExerciseMethods1{
 	 */
 	public static boolean shorterThan(String s1, String s2)
 	{
-		// Your answer here. Edit the return statement as necessary.
-		return true; //only here to compile, you will need to change.
-	}// end shorterThan
+		// return bool val s1 < s2 length
+		return (s1.length() < s2.length());
+	}
 
 
 	/**
@@ -181,9 +215,15 @@ public class ExerciseMethods1{
 	*/
 	public static String stringReverse(String s1)
 	{
-		// Your answer here. Edit the return statement as necessary.
-		return "";
-	}// end stringReverse
+		// reverse string
+		String reversed_string = "";
+		//loop through backwards to place frontwards in reversed_string//
+		for(int i = s1.length() - 1; i >= 0; i--)
+		{
+			reversed_string += s1.charAt(i);
+		}
+		return reversed_string;
+	}
 
 	/**
 		String method returns the given age and weight in a certian output.
@@ -206,9 +246,17 @@ public class ExerciseMethods1{
 	*/
 	public static String ageAndHeight(int age, int feet, int inches)
 	{
-		// Your answer here. Edit the return statement as necessary.
-		return "";
-	}// end ageAndHeight
+		//check for all conditions in the if statement//
+		if ((age > 0 && age < 150) && (feet >= 0 && feet <= 8) && (inches >= 0 && inches <= 11)) 
+		{
+			return "Age: " + age + ", Height: " + feet + "'" + inches + "."; //if in range return this string
+		} 
+		// return that age or heigh incorrect
+		else 
+		{
+			return "Age or height is out of range."; //else return the out of range string
+		}
+	}
 
 
 	/**
@@ -229,9 +277,32 @@ public class ExerciseMethods1{
 	 */
 	public static char charRepeat(String text)
 	{
-		// Your answer here. Edit the assignment and return statement as necessary.
+		//null or less than 2 char
+		if (text == null || text.length() <= 1) 
+		{
+			return '0'; 
+		}
+		
+		//loop through the chars
+		for (int i = 0; i < text.length() - 1; i++) 
+		{
+			char current_char = text.charAt(i); //set value to current character
+			if (current_char == ' ') 
+			{
+				continue;
+			}
+			//loop through to see if there is a repeat
+			for (int j = i + 1; j < text.length(); j++) 
+			{ 
+				if (current_char == text.charAt(j)) 
+				{ 
+					//return current character because it is a repeat
+					return current_char; 
+				}
+			}
+		}
 		return '0';
-	}// end charRepeat
+	}
 
 
 	/**
@@ -248,11 +319,29 @@ public class ExerciseMethods1{
 	 * @param num(s) integer(s), between 0 and 4 integers.
 	 * @return the sum of all integers in the arguments.
 	 */
+	//one int//
 	public static int sumNums(int num)
 	{
-		// Your answer here. Edit the assignment and return statement as necessary.
-		int sum = 0;
-		return sum;
-	}// end sumNums
-
-}// end ExerciseMethods1
+		return num;
+	}
+	//two ints//
+	public static int sumNums(int num, int num2)
+	{
+		return num + num2;
+	}
+	//three ints//
+	public static int sumNums(int num, int num2, int num3)
+	{
+		return num + num2 + num3;
+	}
+	//four ints//
+	public static int sumNums(int num, int num2, int num3, int num4)
+	{
+		return num + num2 + num3 + num4;
+	}
+	//no int//
+	public static int sumNums()
+	{
+		return 0;
+	}
+}
