@@ -12,6 +12,8 @@
  *    true
  */
 
+
+
 import java.util.Scanner;
 
 public class LabProgram_10 {
@@ -29,9 +31,9 @@ public class LabProgram_10 {
    public static int dice(int number){
       int min = 1;
       int max = number;
-      int randomNumber = (int) (Math.random() * (max - min + 1)) + min;
+      int random_number = (int) (Math.random() * (max - min + 1)) + min;
 
-      return randomNumber;
+      return random_number;
    }
    
    /* create your dice method here*/
