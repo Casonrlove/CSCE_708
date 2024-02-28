@@ -23,23 +23,25 @@ public class LabProgram_12 {
    public static void main(String[] args) {
       Scanner scnr = new Scanner(System.in);
       int numItems = scnr.nextInt();
-      String words[] = new String[numItems];
-      int count = 0;
+      String word_array[] = new String[numItems];
+      int num_of_times_present = 0;
 
-      for(int i = 0; i < words.length; i++){
-         words[i] = scnr.next();
+      for(int i = 0; i < word_array.length; i++)
+      {
+         word_array[i] = scnr.next();
       }
 
-      for(String word : words){
-         for(int i = 0; i < words.length; i++){
-            if(words[i].equals(word)){
-               count += 1;
+      for(String word : word_array)
+      {
+         for(int i = 0; i < word_array.length; i++)
+         {
+            if(word_array[i].equals(word))
+            {
+               num_of_times_present += 1;
             }
          }
-         System.out.println(word + " - " + count);
-         count = 0;
+         System.out.println(word + " - " + num_of_times_present);
+         num_of_times_present = 0;
       }
-
-      //for loop for the 
    }
 }
