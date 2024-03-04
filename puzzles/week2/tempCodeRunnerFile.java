@@ -1,0 +1,1 @@
+ring.charAt(0

@@ -25,7 +25,13 @@ import java.util.Scanner;
 public class LabProgram2_1 {
    
    public static void main(String[] args) {
-      
-      /* Type your code here. */
+      Scanner scnr = new Scanner(System.in);
+      String user_string = scnr.nextLine();
+
+      int middle = user_string.length()  / 2;
+      System.out.println(user_string.charAt(0));
+
+
+      System.out.println(user_string.charAt(middle) + user_string.charAt(middle+1) + user_string.charAt(middle+2));
    }
 }
