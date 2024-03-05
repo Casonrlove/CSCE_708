@@ -33,7 +33,5 @@ public class myArrayList {
         myCars.remove(2);
         System.out.println(myCars);
 
-
-
     }
 }
