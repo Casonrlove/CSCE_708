@@ -1,1 +1,2 @@
-ring.charAt(0
+System.out.println(word);
+      // System.out.println(number);

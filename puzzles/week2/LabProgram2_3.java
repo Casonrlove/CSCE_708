@@ -15,7 +15,19 @@ import java.util.Scanner;
 public class LabProgram2_3 {
    
    public static void main(String[] args) {
-      
-      /* Type your code here. */
+      Scanner scnr = new Scanner(System.in);
+
+      int num = scnr.nextInt();
+      String output_string = "";
+
+      for (int i = 1; i <= num; i++) 
+      {
+         if ( (((i%4) == 0) || (i%7) == 0) && ((i%8) != 0))
+         {
+            output_string += i;
+            output_string += " ";
+         } 
+      }
+      System.out.println(output_string);
    }
 }

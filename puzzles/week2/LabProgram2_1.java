@@ -29,9 +29,15 @@ public class LabProgram2_1 {
       String user_string = scnr.nextLine();
 
       int middle = user_string.length()  / 2;
-      System.out.println(user_string.charAt(0));
+      // System.out.println(user_string.charAt(0));
+      // System.out.println("middle is " + middle);
 
+      System.out.print(user_string.charAt(middle-1));
+      System.out.print(user_string.charAt(middle));
+      System.out.print(user_string.charAt(middle+1));
 
-      System.out.println(user_string.charAt(middle) + user_string.charAt(middle+1) + user_string.charAt(middle+2));
+      System.out.println();
+
+      // System.out.println(user_string.charAt(middle-1) + user_string.charAt(middle) + user_string.charAt(middle+1));
    }
 }
