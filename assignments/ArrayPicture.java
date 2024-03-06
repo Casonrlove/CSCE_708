@@ -1,11 +1,10 @@
 /*
- * Jackson Benge
- * 329008577
- * CSCE 111-504
- * 10-11-23
+ * Cason Love
+ * 529008776
+ * CSCE 708
+ * 3/24
  */
-import java.io.File;
-import java.io.FileWriter;
+import java.io.*;
 public class ArrayPicture {
     public static void main(String[] args) {
     //set the size of your square 600.
@@ -18,27 +17,20 @@ public class ArrayPicture {
         int maroonR = 88;
         int maroonG = 0;
         int maroonB = 0;
-        // and here is White.
-        int whiteR = 255;
-        int whiteG = 255;
-        int whiteB = 255;
-        // // blue
-        // int blueR = 173;
-        // int blueG = 216;
-        // int blueB = 230;
-        // // green
-        // int greenR = 173;
-        // int greenG = 255;
-        // int greenB = 173;
-        // // purple
-        // int purpleR = 216;
-        // int purpleG = 173;
-        // int purpleB = 230;
-        // // pink
-        // int pinkR = 255;
-        // int pinkG = 182;
-        // int pinkB = 193;
+        // Grey //
+        int greyR = 225;
+        int greyG = 225;
+        int greyB = 225;
+        // Blue //
+        int blueR = 173;
+        int blueG = 216;
+        int blueB = 230;
+        // Blue //
+        int babyblueR = 204;
+        int babyblueG = 255;
+        int babyblueB = 255;
 
+        //--------------------FILL 1&2 LAYERS--------------------//
         //----------SORT THROUGH ROWS----------//
         for(int i = 0; i < mySize; i++)
         {
@@ -46,43 +38,486 @@ public class ArrayPicture {
             for(int j = 0; j < mySize; j++)
             {
                 //----------CREATE GRADIENT BACKGROUND----------//
-                red[i][j] = whiteR - (i * (whiteR - maroonR) / mySize);
+                // red[i][j] = whiteR - (i * (whiteR - maroonR) / mySize);
                 // green[i][j] = whiteG - (i * (whiteG - maroonG) / mySize);
                 // blue[i][j] = whiteB - (i * (whiteB - maroonB) / mySize);
+
+                //----------ROW1----------//
+                if(i < 75)
+                {
+                    if(j < 75)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else if(j < 150)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else if(j < 225)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else if(j < 300)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else if(j < 375)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else if(j < 450)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+                        
+
+                    }else if(j < 525)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }
+                }
+                //----------ROW2----------//
+                else if(i < 150)
+                {
+                    if(j < 75)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else if(j < 150)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else if(j < 225)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else if(j < 300)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else if(j < 375)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else if(j < 450)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+                        
+                    }else if(j < 525)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }
+                }
+                //----------ROW3----------//
+                else if(i < 225)
+                {
+                    if(j < 75)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else if(j < 150)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else if(j < 225)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else if(j < 300)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else if(j < 375)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else if(j < 450)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+                        
+
+                    }else if(j < 525)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }
+                }
+                //----------ROW4----------//
+                else if(i < 300)
+                {
+                    if(j < 75)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else if(j < 150)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else if(j < 225)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else if(j < 300)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else if(j < 375)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else if(j < 450)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+                        
+                    }else if(j < 525)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }
+                }
+                //----------ROW5----------//
+                else if(i < 375)
+                {
+                    if(j < 75)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else if(j < 150)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else if(j < 225)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else if(j < 300)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else if(j < 375)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else if(j < 450)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+                        
+
+                    }else if(j < 525)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }
+                }
+                //----------ROW6----------//
+                else if(i < 450)
+                {
+                    if(j < 75)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else if(j < 150)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else if(j < 225)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else if(j < 300)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else if(j < 375)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else if(j < 450)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+                        
+                    }else if(j < 525)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }
+                }
+                //----------ROW7----------//
+                else if(i < 525)
+                {
+                    if(j < 75)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else if(j < 150)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else if(j < 225)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else if(j < 300)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else if(j < 375)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else if(j < 450)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+                        
+
+                    }else if(j < 525)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }
+                }
+                //----------ROW8----------//
+                else
+                {
+                    if(j < 75)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else if(j < 150)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else if(j < 225)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else if(j < 300)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }else if(j < 375)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else if(j < 450)
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+                        
+                    }else if(j < 525)
+                    {
+                        red[i][j]   = maroonR;
+                        green[i][j] = maroonG;
+                        blue[i][j]  = maroonB;
+
+                    }else
+                    {
+                        red[i][j]   = greyR;
+                        green[i][j] = greyG;
+                        blue[i][j]  = greyB;
+
+                    }
+                }
             }
         }
 
-        //symbol in the corner
-        int symbolX = mySize - 20;
-        int symbolY = mySize - 20;
-        //yellow
-        int symbolColorR = 255;
-        int symbolColorG = 255;
-        int symbolColorB = 100;
+        //--------------------FILL 3rd LAYER--------------------//
+        int xstart = 225;
+        int ystart = 225;
+        int xstop = 150;
+        int ystop = 150;
 
-        // putting symbol on image
-        for (int i = symbolX; i < symbolX + 10; i++) {
-            for (int j = symbolY; j < symbolY + 10; j++) {
-                red[i][j] = symbolColorR;
-                green[i][j] = symbolColorG;
-                blue[i][j] = symbolColorB;
+        for (int i = xstart; i < xstart + xstop; i++) 
+        {
+            for (int j = ystart; j < ystart + ystop; j++) 
+            {
+                red[i][j]   = babyblueR;
+                green[i][j] = babyblueG;
+                blue[i][j]  = babyblueB;
             }
         }
-        // symbol is a yellow square that stands out from the other pastel and dull colors from the white and maroon gradiant
 
+        int corner_symbol_x = mySize - 20;
+        int corner_symbol_y = mySize - 20;
+
+        //----------SYMBOL----------//
+        for (int i = corner_symbol_x; i < corner_symbol_x + 15; i++) 
+        {
+            for (int j = corner_symbol_y; j < corner_symbol_y + 15; j++) 
+            {
+                red[i][j]   = blueR;
+                green[i][j] = blueG;
+                blue[i][j]  = blueB;
+            }
+        }
 
         // when arrays are filled, send them to writeFile
         writeFile(red, green, blue, "C");
 
-        for(int i = 0; i < mySize; i++){
-            for(int j = 0; j < mySize; j++){
-                int grayValue = (int) ((0.3 * red[i][j]) + (0.59 * green[i][j]) + (0.11 * blue[i][j])); //grabbing the gray value using equation provided
-                red[i][j] = grayValue;
-                green[i][j] = grayValue;
-                blue[i][j] = grayValue;
+        //----------TURN TO GREY----------//
+        for(int i = 0; i < mySize; i++)
+        {
+            for(int j = 0; j < mySize; j++)
+            {
+                int gray_value = (int) ((0.3 * red[i][j]) + (0.59 * green[i][j]) + (0.11 * blue[i][j]));
+                red[i][j]   = gray_value;
+                green[i][j] = gray_value;
+                blue[i][j]  = gray_value;
             }
         }
-        // ((0.3 * R) + (0.59 * G) + (0.11 * B))
+        // ((0.3 * R) + (0.59 * G) + (0.11 * B)) //
 
 
         // when arrays are filled, send them to writeFile
