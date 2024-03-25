@@ -4,8 +4,6 @@
  * 3/24
  */
 
-import java.util.Scanner;
-
 // /**
 //  * Adds two string together
 //  *
@@ -84,21 +82,21 @@ public class Calc
      * </p>
      * @param wrong_num
      */
-    public void request(String wrong_num)
-    {
-        Scanner scan2 = new Scanner(System.in);
-        System.out.printf("Please reinput number %s: ", wrong_num);
-        String number_one = scan2.nextLine();
+    // public void request(String wrong_num)
+    // {
+    //     Scanner scan2 = new Scanner(System.in);
+    //     System.out.printf("Please reinput number %s: ", wrong_num);
+    //     String number_one = scan2.nextLine();
 
-        if (wrong_num.equals("num1") )
-        {
-            this.num1 = number_one;
-        }
-        else
-        {
-            this.num2 = number_one;
-        }
-    }
+    //     if (wrong_num.equals("num1") )
+    //     {
+    //         this.num1 = number_one;
+    //     }
+    //     else
+    //     {
+    //         this.num2 = number_one;
+    //     }
+    // }
 
     /***************** END CLASS FUNCTIONS ********************/
     /**********************************************************/
@@ -145,18 +143,28 @@ public class Calc
         }
         else
         {
-            System.out.println("NAN");
+            // System.out.println("NAN");
             
             //request new string
-            if (!num1.matches("\\d+"))
-            {
-                request("1");
-            }
-            else
-            {
-                request("2");
-            }
+            // if (!num1.matches("\\d+"))
+            // {
+            //     // request("1");
+            //     System.out.println("NAN");
+            //     System.exit(0);
+            // }
+            // else
+            // {
+            //     // request("2");
+            //     System.out.println("NAN");
+            //     System.exit(0);
+            // }
         }
+        if (!num1.matches("\\d+") || !num2.matches("\\d+"))
+            {
+                // request("1");
+                System.out.println("Sum: NAN");
+                System.exit(0);
+            }
     }
     
     /********** REVERSE STRING **********/
@@ -255,15 +263,15 @@ public class Calc
 
             int1 = (int) temp1 - '0';
             int2 = (int) temp2 - '0';
-            sum = int1 + int2;
+            sum = int1 + int2 + carry;
             
-            reversed_final_sum += String.valueOf(remainder(sum + carry));
+            reversed_final_sum += String.valueOf(remainder(sum));
             carry = carry(sum);
 
         }
         if (carry == 1)
         {
-            reversed_final_sum += remainder(sum + carry);
+            reversed_final_sum += "1" ;remainder(sum + carry);
         }
 
         reverseRemainder(reversed_final_sum);
