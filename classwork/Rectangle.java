@@ -59,5 +59,6 @@ public class Rectangle
         System.out.println("Perimeter of myRectangle2: " + myRectangle2.calculatePerimeter());
 
         System.out.println(myRectangle.getClass());
+
     }
 }

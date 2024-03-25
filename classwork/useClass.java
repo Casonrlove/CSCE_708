@@ -5,7 +5,7 @@
  */
 
 public class useClass {
-    public static void main(String[] args) 
+    public static void main(String[] args)
     {
         Car myCar = new Car("ford", "F150", 2015);
         myCar.displayInfo();
