@@ -271,7 +271,8 @@ public class Calc
         }
         if (carry == 1)
         {
-            reversed_final_sum += "1" ;remainder(sum + carry);
+            reversed_final_sum += "1" ; //remainder(sum + carry);
+            num1 += "1";
         }
 
         reverseRemainder(reversed_final_sum);
