@@ -24,6 +24,7 @@ public class CalcDriver
         String number_two = scnr.nextLine();
 
         Calc mainCalc = new Calc(number_one, number_two);
+        // Calc calc2 = new Calc(number_one, number_two);
 
         mainCalc.addString();
 

@@ -20,7 +20,7 @@ public class Calc
     String num1_reversed = "";
     String num2_reversed = "";
 
-    String final_sum = "";
+    public String final_sum = "";
     // String reversed_final_sum = "";
 
     int max_length;
