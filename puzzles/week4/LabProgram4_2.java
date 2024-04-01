@@ -93,7 +93,7 @@ public class LabProgram4_2 {
       {
          if(i == 0)
          {
-            new2 += first.charAt(last.length()-1);
+            new2 += first.charAt(first.length()-1);
          }
          else if(i == last.length()-1)
          {
