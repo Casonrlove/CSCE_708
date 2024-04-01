@@ -23,7 +23,7 @@
 import java.util.Scanner;
 
 public class LabProgram4_3 {
-   
+
     public static void main(String[] args) {
         
         Scanner scnr = new Scanner(System.in);
@@ -34,14 +34,15 @@ public class LabProgram4_3 {
             output = "empty";
         }
 
-        int counter = 0;
-        for (int i = 0; i < num; i++)
+        int iterator = 0, counter = 0;
+        while (counter < num)
         {
-<<<<<<< HEAD
-            // output += 
-=======
-            output += 
->>>>>>> 319acab94a257e986ac78da203669d462b67bd7e
+            if ((iterator % 2) == 0)
+            {
+                output += Integer.toString(iterator) + " ";
+                counter += 1;
+            }
+            iterator += 1;
         }
         System.out.println(output);
     }

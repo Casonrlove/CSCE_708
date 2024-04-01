@@ -23,6 +23,48 @@ import java.util.Scanner;
 
 public class LabProgram4_5 {
    public static void main(String[] args) {
-      /* Type your code here. */
+      Scanner scanner = new Scanner(System.in);
+      
+      int n = scanner.nextInt();
+
+      if (n < 2 || n > 50)
+      {
+         System.out.println("Invalid input. Size must be between 2 and 50.");
+      }
+      else
+      {
+         int[][] matrix = SquareMatrix(n);
+         printMatrix(matrix);
+      }
+
+      scanner.close();
+   }
+
+   public static int[][] SquareMatrix(int n)
+   {
+      int[][] matrix = new int[n][n];
+      int num = 1;
+
+      for (int i = 0; i < n; i++)
+      {
+         for (int j = 0; j < n; j++)
+         {
+            matrix[i][j] = num++;
+         }
+      }
+
+      return matrix;
+   }
+
+   public static void printMatrix(int[][] matrix)
+   {
+      for (int i = 0; i < matrix.length; i++)
+      {
+         for (int j = 0; j < matrix[i].length; j++)
+         {
+            System.out.print(matrix[i][j] + " ");
+         }
+         System.out.println();
+      }
    }
 }

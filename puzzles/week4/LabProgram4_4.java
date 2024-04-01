@@ -24,6 +24,36 @@ import java.util.Scanner;
 
 public class LabProgram4_4 {
    public static void main(String[] args) {
-      /* Type your code here. */
+      Scanner scanner = new Scanner(System.in);
+
+      int size = scanner.nextInt();
+      int[] input = new int[size];
+      
+      for (int i = 0; i < size; i++)
+      {
+         input[i] = scanner.nextInt();
+      }
+      
+      System.out.println( decreasingCheck(input)); //"Result: " +
+      
+      scanner.close();
+   }
+
+   public static boolean decreasingCheck(int[] input)
+   {
+      if (input.length <= 1)
+      {
+         return false; // cannot have decreasing adjacent numbers if array size is 1 or less
+      }
+      
+      for (int i = 0; i < input.length - 1; i++)
+      {
+         if (input[i] > input[i + 1])
+         {
+            return true; // if any adjacent numbers are decreasing, return true
+         }
+      }
+      
+      return false; // no decreasing adjacent numbers found
    }
 }
