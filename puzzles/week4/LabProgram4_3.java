@@ -37,7 +37,11 @@ public class LabProgram4_3 {
         int counter = 0;
         for (int i = 0; i < num; i++)
         {
+<<<<<<< HEAD
             // output += 
+=======
+            output += 
+>>>>>>> 319acab94a257e986ac78da203669d462b67bd7e
         }
         System.out.println(output);
     }

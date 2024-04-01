@@ -21,6 +21,20 @@
  *    yexau am sniversitt
  */
 
+// import java.util.Scanner;
+
+// public class LabProgram4_2 {
+   
+//    public static void main(String[] args) {
+      
+//       Scanner scnr = new Scanner(System.in);
+//       String user_input = scnr.nextLine();
+//       String[] words = user_input.split("\\s+");
+
+//       word1 = 
+//    }
+// }
+
 import java.util.Scanner;
 
 public class LabProgram4_2 {
@@ -34,6 +48,7 @@ public class LabProgram4_2 {
 
       // Check if there are exactly 3 input strings
       if ( (input.length == 3)) // && (first.length() > 1) && (third.length() > 1) )
+      if (input.length == 3)
       {
          String firstnew = swapFirstLast(first, third);
          String thirdnew = swapFirstLast2(first, third);

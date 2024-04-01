@@ -40,7 +40,11 @@ public class LabProgram4_1 {
       if (  (isvowel(word.charAt(0)) && isvowel(word.charAt(1))) ||
             (isvowel(word.charAt(0)) && isvowel(word.charAt(2))) ||
             (isvowel(word.charAt(1)) && isvowel(word.charAt(2))) ) {
+<<<<<<< HEAD
                System.out.println("vowels");
+=======
+               System.out.println("vowel");
+>>>>>>> 319acab94a257e986ac78da203669d462b67bd7e
          
       } else {
          System.out.println("consonant");
