@@ -162,8 +162,9 @@ public class Calc
         if (!num1.matches("\\d+") || !num2.matches("\\d+"))
             {
                 // request("1");
-                System.out.println("Sum: NAN");
-                System.exit(0);
+                // System.out.println("Sum: NAN");
+                this.final_sum = "NAN";
+                // System.exit(0);
             }
     }
     

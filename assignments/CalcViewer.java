@@ -16,8 +16,8 @@ public class CalcViewer {
     public static void main(String[] args) {
         // Create an instance of CalculatorGUI and set up the frame
         CalculatorGUI calculatorGUI = new CalculatorGUI();
-        calculatorGUI.setTitle("Super Special Calculator");
-        calculatorGUI.setSize(400, 250); // Increased width and height
+        calculatorGUI.setTitle("Cason's Calculator");
+        calculatorGUI.setSize(600, 300); // Increased width and height
         calculatorGUI.setLocationRelativeTo(null);
         calculatorGUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         calculatorGUI.setVisible(true);

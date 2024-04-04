@@ -20,7 +20,7 @@ public class CalculatorGUI extends JFrame implements ActionListener {
         GridBagConstraints c = new GridBagConstraints();
 
         // intro label
-        introLabel = new JLabel("Howdy! Enter two numbers and click 'Calculate'.");
+        introLabel = new JLabel("Howdy! Enter two numbers to calculate their sum.");
         introLabel.setFont(new Font("Arial", Font.BOLD, 12));
         c.gridx = 0;
         c.gridy = 0;
@@ -66,7 +66,7 @@ public class CalculatorGUI extends JFrame implements ActionListener {
         add(clearButton, c);
 
         // result label
-        labelResult = new JLabel("Result:");
+        labelResult = new JLabel("Sum:");
         c.gridx = 0;
         c.gridy = 4;
         add(labelResult, c);
@@ -81,8 +81,13 @@ public class CalculatorGUI extends JFrame implements ActionListener {
 
     // handle button clicks
     public void actionPerformed(ActionEvent e) {
+        
         if (e.getSource() == calculateButton) {
-            String result = Calc.addString(textField1.getText(), textField2.getText()); // send to calc class
+            Calc newCalc = new Calc(textField1.getText(), textField2.getText());
+            newCalc.addString();
+            String result = newCalc.final_sum;
+            System.out.println(newCalc.final_sum);
+            // String result = Calc.addString(textField1.getText(), textField2.getText()); // send to calc class
             resultField.setText(result); // set result field
         } else if (e.getSource() == clearButton) {
             // reset fields
