@@ -1,14 +1,4 @@
-/*
- * Jackson Benge
- * CSCE 111-504
- * UIN: 329008577
- * November 8th, 2023
- */
-/**
- * The Calc class contains methods for performing calculations, primarily
- * focused
- * on adding two numeric strings.
- */
+
 public class Calc {
 
     /**

@@ -1,14 +1,10 @@
-/*
- * Jackson Benge
- * CSCE 111-504
- * UIN: 329008577
- * November 16th, 2023
- */
+
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;

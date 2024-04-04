@@ -1,4 +1,14 @@
-// calculatorgui
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 public class CalculatorGUI extends JFrame implements ActionListener {
     private JLabel introLabel, labelNum1, labelNum2, labelResult;
     private JTextField textField1, textField2, resultField;
@@ -10,7 +20,7 @@ public class CalculatorGUI extends JFrame implements ActionListener {
         GridBagConstraints c = new GridBagConstraints();
 
         // intro label
-        introLabel = new JLabel("Welcome to My Calculator! Enter two numbers and click 'Calculate'.");
+        introLabel = new JLabel("Howdy! Enter two numbers and click 'Calculate'.");
         introLabel.setFont(new Font("Arial", Font.BOLD, 12));
         c.gridx = 0;
         c.gridy = 0;
