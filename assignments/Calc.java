@@ -21,7 +21,6 @@ public class Calc
     String num2_reversed = "";
 
     public String final_sum = "";
-    // String reversed_final_sum = "";
 
     int max_length;
 
@@ -75,29 +74,6 @@ public class Calc
         this.num2 = num2;
     }
 
-    /**********PROMPT USER AGAIN **********/
-    /**
-     * <p>
-     *      Prompts the user again for wrong input
-     * </p>
-     * @param wrong_num
-     */
-    // public void request(String wrong_num)
-    // {
-    //     Scanner scan2 = new Scanner(System.in);
-    //     System.out.printf("Please reinput number %s: ", wrong_num);
-    //     String number_one = scan2.nextLine();
-
-    //     if (wrong_num.equals("num1") )
-    //     {
-    //         this.num1 = number_one;
-    //     }
-    //     else
-    //     {
-    //         this.num2 = number_one;
-    //     }
-    // }
-
     /***************** END CLASS FUNCTIONS ********************/
     /**********************************************************/
 
@@ -105,7 +81,7 @@ public class Calc
     /******************* WORKING FUNCTIONS ********************/
     /**********************************************************/
 
-    /********** VALIDATE STRING **********/
+    /********** PAD STRING **********/
     /**
      * <p>
      *  pads the shorter string
@@ -243,7 +219,10 @@ public class Calc
     {
         /********** VALIDATE **********/
         validString();
-
+        if(final_sum.equals("NAN"))
+        {
+            return "NAN";
+        }
         /********** PAD **********/
         padString();
 
